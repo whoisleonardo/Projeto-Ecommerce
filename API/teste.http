@@ -1,0 +1,17 @@
+### Requisição para a raiz
+GET http://localhost:5011/
+
+### Requisição para a funcionalidade com GET
+GET http://localhost:5011/api/produto/listar
+
+### Requisição para a funcionalidade com POST
+POST http://localhost:5011/api/produto/cadastrar
+Content-Type: application/json
+
+{
+  "nome": "Hollow Knight: Silksong",
+  "preco": 299.90,
+  "quantidade": 15
+}
+### Busca de produto pelo nome
+GET http://localhost:5011/api/produto/buscar
