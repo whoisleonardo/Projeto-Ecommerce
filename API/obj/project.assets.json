@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/leo/.nuget/packages/": {}
+    "/home/whoisleonardo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/leo/Documents/Projetos/Aula C/Ecommerce/API/API.csproj",
+      "projectUniqueName": "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/home/leo/Documents/Projetos/Aula C/Ecommerce/API/API.csproj",
-      "packagesPath": "/home/leo/.nuget/packages/",
-      "outputPath": "/home/leo/Documents/Projetos/Aula C/Ecommerce/API/obj/",
+      "projectPath": "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/API.csproj",
+      "packagesPath": "/home/whoisleonardo/.nuget/packages/",
+      "outputPath": "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/leo/.nuget/NuGet/NuGet.Config"
+        "/home/whoisleonardo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,6 +38,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -62,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.118/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

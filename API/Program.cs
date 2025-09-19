@@ -6,7 +6,6 @@ Console.Clear();
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Adiciona o middleware do HTTP Cat
 app.UseHttpCat();
 
 List<Produto> produtos = new List<Produto>
@@ -45,7 +44,6 @@ app.MapPost("/api/produto/cadastrar", ([FromBody] Produto produto) =>
 
 app.MapGet("/api/produto/buscar/{nome}", (string nome) =>
 {
-    // string nome = "Minecraft";
     var produto = produtos.FirstOrDefault(x => x.Nome == nome);
     if (produto == null)
     {
@@ -54,5 +52,30 @@ app.MapGet("/api/produto/buscar/{nome}", (string nome) =>
     return Results.Ok(produto);
 });
 
-app.Run();
+app.MapPost("/api/produto/remover", ([FromBody] Produto produto) =>
+{
+    var produtoParaRemover = produtos.FirstOrDefault(x => x.Nome == produto.Nome);
+    if (produtoParaRemover == null)
+    {
+        return Results.NotFound("Produto não encontrado");
+    }
+    produtos.Remove(produtoParaRemover);
+    return Results.Ok(produtoParaRemover);
+});
 
+app.MapPost("/api/produto/alterar/{nome}", (string nome, [FromBody] Produto produto) =>
+{
+    var produtoParaAlterar = produtos.FirstOrDefault(x => x.Nome == nome);
+    if (produtoParaAlterar == null)
+    {
+        return Results.NotFound("Produto não encontrado");
+    }
+    
+    produtoParaAlterar.Nome = produto.Nome;
+    produtoParaAlterar.Preco = produto.Preco;
+    produtoParaAlterar.Quantidade = produto.Quantidade;
+    
+    return Results.Ok(produtoParaAlterar);
+});
+
+app.Run();
