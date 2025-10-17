@@ -1,0 +1,3 @@
+[1017/102912.978:ERROR:registration_protocol_win.cc(108)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1017/102915.317:ERROR:registration_protocol_win.cc(108)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[1017/102921.254:ERROR:registration_protocol_win.cc(108)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)

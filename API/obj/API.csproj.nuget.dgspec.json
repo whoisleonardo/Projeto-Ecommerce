@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/API.csproj": {}
+    "c:\\leo\\Projeto-Ecommerce\\API\\API.csproj": {}
   },
   "projects": {
-    "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/API.csproj": {
+    "c:\\leo\\Projeto-Ecommerce\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/API.csproj",
+        "projectUniqueName": "c:\\leo\\Projeto-Ecommerce\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/API.csproj",
-        "packagesPath": "/home/whoisleonardo/.nuget/packages/",
-        "outputPath": "/home/whoisleonardo/Documents/Projetos DEV/Projeto-Ecommerce/API/obj/",
+        "projectPath": "c:\\leo\\Projeto-Ecommerce\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\LEONARDOMIGUELDUBENA\\.nuget\\packages\\",
+        "outputPath": "c:\\leo\\Projeto-Ecommerce\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/whoisleonardo/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\LEONARDOMIGUELDUBENA\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
