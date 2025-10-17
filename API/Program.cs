@@ -4,9 +4,25 @@ using Microsoft.AspNetCore.Mvc;
 
 Console.Clear();
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDataContext>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
-app.UseHttpCat();
+//app.UseHttpCat();
+
+// Configure CORS before defining routes
+app.UseCors("AllowAll");
 
 List<Produto> produtos = new List<Produto>
 {
@@ -22,18 +38,34 @@ app.MapGet("/", () => "API de Produtos");
 
 app.MapGet("/api/produto/listar", () =>
 {
-    if (produtos.Count > 0)
+    if (produtos.Any())
     {
-        return Results.Ok(produtos);
+        return Results.Ok(produtos.ToList());
     }
-    return Results.BadRequest();
+    return Results.NotFound("Nenhum produto encontrado");
 });
 
 app.MapPost("/api/produto/cadastrar", ([FromBody] Produto produto) =>
 {
+    // Validate input
+    if (produto == null || string.IsNullOrWhiteSpace(produto.Nome))
+    {
+        return Results.BadRequest("Dados do produto inválidos. Nome é obrigatório.");
+    }
+    
+    if (produto.Preco <= 0)
+    {
+        return Results.BadRequest("Preço deve ser maior que zero.");
+    }
+    
+    if (produto.Quantidade < 0)
+    {
+        return Results.BadRequest("Quantidade não pode ser negativa.");
+    }
+
     foreach (var produtoCadastrado in produtos)
     {
-        if (produtoCadastrado.Nome == produto.Nome)
+        if (produtoCadastrado.Nome.Equals(produto.Nome, StringComparison.OrdinalIgnoreCase))
         {
             return Results.Conflict("Produto já cadastrado");
         }
@@ -44,7 +76,12 @@ app.MapPost("/api/produto/cadastrar", ([FromBody] Produto produto) =>
 
 app.MapGet("/api/produto/buscar/{nome}", (string nome) =>
 {
-    var produto = produtos.FirstOrDefault(x => x.Nome == nome);
+    if (string.IsNullOrWhiteSpace(nome))
+    {
+        return Results.BadRequest("Nome do produto é obrigatório");
+    }
+    
+    var produto = produtos.FirstOrDefault(x => x.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
     if (produto == null)
     {
         return Results.NotFound("Produto não encontrado");
@@ -70,11 +107,11 @@ app.MapPost("/api/produto/alterar/{nome}", (string nome, [FromBody] Produto prod
     {
         return Results.NotFound("Produto não encontrado");
     }
-    
+
     produtoParaAlterar.Nome = produto.Nome;
     produtoParaAlterar.Preco = produto.Preco;
     produtoParaAlterar.Quantidade = produto.Quantidade;
-    
+
     return Results.Ok(produtoParaAlterar);
 });
 
