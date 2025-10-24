@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\leo\\Projeto-Ecommerce\\API\\API.csproj": {}
+    "C:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\leo\\Projeto-Ecommerce\\API\\API.csproj": {
+    "C:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\leo\\Projeto-Ecommerce\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\leo\\Projeto-Ecommerce\\API\\API.csproj",
+        "projectPath": "C:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\API.csproj",
         "packagesPath": "C:\\Users\\LEONARDOMIGUELDUBENA\\.nuget\\packages\\",
-        "outputPath": "C:\\leo\\Projeto-Ecommerce\\API\\obj\\",
+        "outputPath": "C:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LEONARDOMIGUELDUBENA\\AppData\\Roaming\\NuGet\\NuGet.Config"

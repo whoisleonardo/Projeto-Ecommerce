@@ -2386,11 +2386,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\leo\\Projeto-Ecommerce\\API\\API.csproj",
+      "projectUniqueName": "c:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\leo\\Projeto-Ecommerce\\API\\API.csproj",
+      "projectPath": "c:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\API.csproj",
       "packagesPath": "C:\\Users\\LEONARDOMIGUELDUBENA\\.nuget\\packages\\",
-      "outputPath": "c:\\leo\\Projeto-Ecommerce\\API\\obj\\",
+      "outputPath": "c:\\Users\\LEONARDOMIGUELDUBENA\\Documents\\Projeto-Ecommerce\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LEONARDOMIGUELDUBENA\\AppData\\Roaming\\NuGet\\NuGet.Config"

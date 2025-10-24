@@ -30,8 +30,6 @@ List<Produto> produtos = new List<Produto>
     new Produto { Nome = "God of War Ragnarok", Preco = 349.90, Quantidade = 6 },
     new Produto { Nome = "Elden Ring", Preco = 279.90, Quantidade = 5 },
     new Produto { Nome = "Minecraft", Preco = 99.90, Quantidade = 15 },
-    new Produto { Nome = "Red Dead Redemption 2", Preco = 199.90, Quantidade = 4 }
-
 };
 
 app.MapGet("/", () => "API de Produtos");
